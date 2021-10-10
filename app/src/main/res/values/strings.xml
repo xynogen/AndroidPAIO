@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PAIO</string>
+    <string name="tagLine">Aplikasi Teknologi Budidaya Ikan</string>
+    <string name="food">Beri Makan</string>
+    <string name="water">Kualitas Air</string>
+    <string name="prediction">Prediksi</string>
+    <string name="settings">Pengaturan</string>
+    <string name="polsri">logo polsri</string>
+    <string name="wave">gambar animasi Gelombang</string>
+    <string name="foodDesc">Halaman ini menampilkan jumlah pakan ikan anda saat ini, Anda juga dapat mengatur waktu pemberitahuan makan ikan, dan Anda dapat memberikan pakan ikan dengan cara menekan tombol Beri Pakan
+    </string>
+    <string name="waterDesc">Halaman ini menampilkan Kualitas Air Kolam Anda</string>
+</resources>
