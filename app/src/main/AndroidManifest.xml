@@ -11,12 +11,12 @@
         android:roundIcon="@mipmap/ic_polsri_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Paio">
-        <activity android:name=".kondisiAir"></activity>
-        <activity android:name=".settings" />
-        <activity android:name=".prediction" />
+        <activity android:name=".menu.kondisiAir"></activity>
+        <activity android:name=".menu.settings" />
+        <activity android:name=".menu.prediction" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".beriMakan" />
-        <activity android:name=".splash">
+        <activity android:name=".menu.beriMakan" />
+        <activity android:name=".splash.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

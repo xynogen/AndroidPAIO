@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -161,14 +162,16 @@
                         android:textSize="15sp"
                         android:textColor="@color/blue"/>
                     <TextView
+                        android:id="@+id/tvTimerPakan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6 Jam"
+                        android:text=""
                         android:textStyle="bold"
                         android:textColor="@color/blue"
                         android:textSize="25sp"/>
 
                     <Button
+                        android:id="@+id/btnTimerPakan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Atur"
@@ -207,15 +210,17 @@
                         android:textSize="15sp"
                         android:textColor="@color/blue"/>
                     <TextView
+                        android:id="@+id/tvBeratPakan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="70 Kg"
+                        android:text=""
                         android:textColor="@color/blue"
                         android:textSize="25sp"
                         android:textStyle="bold"
                         />
 
                     <Button
+                        android:id="@+id/btnBeratPakan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Masukkan"
