@@ -12,28 +12,40 @@
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/layout/date_picker_pop.xml"
     },
     {
-        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-anydpi-v21_ic_flow.xml.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_flow.xml"
     },
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_settings_round.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxxhdpi/ic_settings_round.png"
     },
     {
-        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-ldpi_ic_food.png.flat",
-        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-ldpi/ic_food.png"
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-ldpi_ic_food.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-ldpi/ic_food.png"
     },
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-ldpi_ic_settings_foreground.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-ldpi/ic_settings_foreground.png"
     },
     {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_food.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-mdpi/ic_food.png"
+    },
+    {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-hdpi/ic_flow.png"
+    },
+    {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/layout_activity_camera_view.xml.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/layout/activity_camera_view.xml"
     },
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_prediction.png.flat",
@@ -144,6 +156,10 @@
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_flow.png"
+    },
+    {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_settings.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxxhdpi/ic_settings.png"
     },
@@ -212,6 +228,10 @@
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-xxxhdpi/ic_polsri_round.png"
     },
     {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xxxhdpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_flow.png"
+    },
+    {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_settings_round.xml.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/res/mipmap-anydpi-v26/ic_settings_round.xml"
     },
@@ -238,6 +258,10 @@
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_food.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-hdpi/ic_food.png"
+    },
+    {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-mdpi/ic_flow.png"
     },
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-mdpi_ic_prediction.png.flat",
@@ -272,6 +296,10 @@
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-mdpi/ic_watering.png"
     },
     {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-ldpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-ldpi/ic_flow.png"
+    },
+    {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_wave.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_wave.png"
     },
@@ -294,6 +322,10 @@
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-hdpi_ic_settings_foreground.png.flat",
         "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-hdpi/ic_settings_foreground.png"
+    },
+    {
+        "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xhdpi_ic_flow.png.flat",
+        "source": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_flow.png"
     },
     {
         "merged": "/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/merged_res/debug/drawable-xxhdpi_ic_settings_foreground.png.flat",

@@ -1,4 +1,4 @@
-#Thu Oct 14 16:47:02 WIB 2021
+#Fri Jan 14 18:14:36 WIB 2022
 base.0=/home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

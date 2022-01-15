@@ -1,6 +1,6 @@
 package com.polsri.paio.dataClass;
 
-public class SettingsBiaya {
+public class    SettingsBiaya {
     String biayaPakan, biayaTenagaKerja, biayaPembibitan, biayaPerawatan, biayaOverhead,
             biayaUtilitas, biayaDistribusiPemasaran;
 
@@ -73,4 +73,21 @@ public class SettingsBiaya {
     public void setBiayaDistribusiPemasaran(String biayaDistribusiPemasaran) {
         this.biayaDistribusiPemasaran = biayaDistribusiPemasaran;
     }
+
+    public int getTotalBiaya() {
+        if (this.biayaPakan.isEmpty() || this.biayaTenagaKerja.isEmpty() ||
+                this.biayaPembibitan.isEmpty() || this.biayaPerawatan.isEmpty() ||
+                this.biayaOverhead.isEmpty() || this.biayaUtilitas.isEmpty() || this.biayaDistribusiPemasaran.isEmpty())
+        {
+            return 1;
+        }
+        else {
+            int totalBiaya = Integer.parseInt(this.biayaPakan) + Integer.parseInt(this.biayaTenagaKerja) +
+                    Integer.parseInt(this.biayaPembibitan) + Integer.parseInt(this.biayaPerawatan) +
+                    Integer.parseInt(this.biayaOverhead) + Integer.parseInt(this.biayaUtilitas) +
+                    Integer.parseInt(this.biayaDistribusiPemasaran);
+            return totalBiaya;
+        }
+    }
+
 }

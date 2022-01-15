@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.1.0] /home/xynogen/.gradle/caches/transforms-3/6c5e3aa967d855802a79260669d24385/transformed/swiperefreshlayout-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/xynogen/.gradle/caches/transforms-3/1e16332f7c8ddd4e98ea29e884dbf410/transformed/firebase-analytics-19.0.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] /home/xynogen/.gradle/caches/transforms-3/af7e085656cc0436846770d551829765/transformed/navigation-ui-2.3.5/AndroidManifest.xml:17:1-24:12
@@ -66,20 +66,20 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /home/xynogen/.gradle/cac
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/xynogen/.gradle/caches/transforms-3/0f51d6eade7a11156e3fc7ee53014d2e/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /home/xynogen/.gradle/caches/transforms-3/3c4cdcd2e9f2910d703350965f49f5be/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/xynogen/.gradle/caches/transforms-3/f33bcb2f5c49a496470aa54ba8b02aa6/transformed/annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
+INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
 	package
 		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:3:5-30
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-27:12
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:1-30:12
 		INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:2:11-69
@@ -102,7 +102,7 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:19.0.0] /h
 	android:name
 		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:7:5-25:19
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:7:5-28:19
 MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/xynogen/.gradle/caches/transforms-3/1e16332f7c8ddd4e98ea29e884dbf410/transformed/firebase-analytics-19.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.firebase:firebase-analytics:19.0.0] /home/xynogen/.gradle/caches/transforms-3/1e16332f7c8ddd4e98ea29e884dbf410/transformed/firebase-analytics-19.0.0/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.material:material:1.3.0] /home/xynogen/.gradle/caches/transforms-3/8162bf67bb1b3c6586398f69137a94d1/transformed/material-1.3.0/AndroidManifest.xml:22:5-20
@@ -173,28 +173,32 @@ activity#com.polsri.paio.menu.prediction
 ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:16:9-53
 	android:name
 		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:16:19-50
-activity#com.polsri.paio.MainActivity
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:17:9-50
+activity#com.polsri.paio.menu.CameraView
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:17:9-53
 	android:name
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:17:19-47
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:17:19-50
 activity#com.polsri.paio.menu.beriMakan
 ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:18:9-52
 	android:name
 		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:18:19-49
+activity#com.polsri.paio.MainActivity
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:19:9-50
+	android:name
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:19:19-47
 activity#com.polsri.paio.splash.splash
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:19:9-24:20
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:22:9-27:20
 	android:name
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:19:19-48
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:22:19-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:20:13-23:29
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:23:13-26:29
 action#android.intent.action.MAIN
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:21:17-69
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:24:17-69
 	android:name
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:21:25-66
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:24:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:22:17-77
+ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:25:17-77
 	android:name
-		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:22:27-74
+		ADDED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml:25:27-74
 uses-sdk
 INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/xynogen/Pekerjaan/IOT/PAIO/AndroidPAIO/app/src/main/AndroidManifest.xml

@@ -29,19 +29,19 @@
             android:background="@color/white"
             android:layout_toRightOf="@id/logo"
             />
+
         <TextView
             android:id="@+id/App"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_toRightOf="@id/garis"
             android:text="@string/app_name"
-            android:textStyle="bold"
             android:textColor="@color/white"
             android:textSize="40sp"
-            android:layout_centerHorizontal="true"
-            android:layout_toRightOf="@id/garis"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="10dp"
-            />
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -112,16 +112,23 @@
                             android:text="Tanggal Mulai Pembudidayaan"
                             android:layout_gravity="center_vertical"
                             android:textColor="@color/blue"/>
-                        <EditText
-                            android:id="@+id/etTanggalPembudidayaan"
-                            android:layout_marginLeft="40dp"
+                        <Button
+                            android:id="@+id/btnTanggalPembudidayaan"
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:text="+"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tvTanggalPembudidayaan"
+                            android:layout_marginLeft="20dp"
                             android:layout_width="match_parent"
                             android:paddingRight="4dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:textColor="@color/blue"
-                            android:backgroundTint="@color/blue"
-                            android:inputType="none" />
+                            android:backgroundTint="@color/blue" />
                     </LinearLayout>
                     <LinearLayout
                         android:layout_marginTop="4dp"
@@ -136,18 +143,51 @@
                             android:text="Tanggal Produk Terjual"
                             android:layout_gravity="center_vertical"
                             android:textColor="@color/blue"/>
-                        <EditText
-                            android:id="@+id/etTanggalTerjual"
-                            android:layout_marginLeft="40dp"
+                        <Button
+                            android:id="@+id/btnTanggalTerjual"
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="30dp"
+                            android:text="+"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:id="@+id/tvTanggalTerjual"
+                            android:layout_marginLeft="20dp"
+                            android:layout_width="match_parent"
+                            android:paddingRight="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:backgroundTint="@color/blue" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Selisih Hari"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/blue"/>
+
+                        <TextView
+                            android:id="@+id/tvSelisihHari"
+                            android:layout_marginLeft="30dp"
                             android:layout_width="match_parent"
                             android:paddingRight="4dp"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:textColor="@color/blue"
                             android:backgroundTint="@color/blue"
-                            android:inputType="none"/>
+                            />
                     </LinearLayout>
                 </LinearLayout>
+
 
             </androidx.cardview.widget.CardView>
 

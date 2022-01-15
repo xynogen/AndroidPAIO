@@ -29,9 +29,10 @@ public class beriMakan extends AppCompatActivity {
     DatabaseReference database;
     Button beriMakan, btnTimerPakan, btnBeratPakan;
     Dialog numberPickerDialog;
-    TextView tvTimerPakan, tvBeratPakan;
+    TextView tvTimerPakan, tvBeratPakan, tvBeratSekarang;
     int timerPakan, beratPakan;
-    com.polsri.paio.dataClass.BeriMakan BeriMakan;
+    BeriMakan BeriMakan;
+    Switch sw;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,11 +40,14 @@ public class beriMakan extends AppCompatActivity {
         beriMakan = (Button) findViewById(R.id.beriMakan);
         tvTimerPakan = (TextView) findViewById(R.id.tvTimerPakan);
         tvBeratPakan = (TextView) findViewById(R.id.tvBeratPakan);
+        tvBeratSekarang = (TextView) findViewById(R.id.tvBeratSekarang);
         timerPakan = 0;
         beratPakan = 0;
         database = FirebaseDatabase.getInstance().getReference("/");
         numberPickerDialog = new Dialog(this);
         BeriMakan = new BeriMakan();
+        sw = new Switch("0", "0", "0");
+        database.child("switch").setValue(sw);
 
         database.child("berimakan").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
@@ -55,6 +59,7 @@ public class beriMakan extends AppCompatActivity {
                     BeriMakan = task.getResult().getValue(BeriMakan.class);
                     tvBeratPakan.setText(BeriMakan.getBeratPakan().concat(" Kg"));
                     tvTimerPakan.setText(BeriMakan.getTimerPakan().concat(" Jam"));
+                    tvBeratSekarang.setText(BeriMakan.getBeratSekarang().concat(" Kg"));
                 }
             }
         });
@@ -65,6 +70,7 @@ public class beriMakan extends AppCompatActivity {
                 BeriMakan = snapshot.child("berimakan").getValue(BeriMakan.class);
                 tvBeratPakan.setText(BeriMakan.getBeratPakan().concat(" Kg"));
                 tvTimerPakan.setText(BeriMakan.getTimerPakan().concat(" Jam"));
+                tvBeratSekarang.setText(BeriMakan.getBeratSekarang().concat(" Kg"));
             }
 
             @Override
@@ -77,6 +83,9 @@ public class beriMakan extends AppCompatActivity {
         beriMakan.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
+                int beratSekarang = (int) Integer.parseInt(BeriMakan.getBeratSekarang()) - 1;
+                BeriMakan.setBeratSekarang(String.valueOf(beratSekarang));
+                database.child("berimakan").setValue(BeriMakan);
                 database.child("switch").child("blower").setValue("1");
                 Toast.makeText(getBaseContext(), "Blower Dinyalakan" , Toast.LENGTH_SHORT ).show();
             }
@@ -127,6 +136,7 @@ public class beriMakan extends AppCompatActivity {
                         beratPakan = Select.getValue();
                         tvBeratPakan.setText(String.valueOf(beratPakan).concat(" Kg"));
                         BeriMakan.setBeratPakan(String.valueOf(beratPakan));
+                        BeriMakan.setBeratSekarang(String.valueOf(beratPakan));
                         database.child("berimakan").setValue(BeriMakan);
                         numberPickerDialog.dismiss();
                     }
@@ -138,7 +148,7 @@ public class beriMakan extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 Switch Switch = snapshot.child("switch").getValue(Switch.class);
-                if (Switch.getPompa() == "1" || Switch.getBlower() == "1") {
+                if (Switch.getPompa() == "1" || Switch.getBlower() == "1" || Switch.getPompa2() == "1") {
                     beriMakan.setEnabled(false);
                     beriMakan.setClickable(false);
                     beriMakan.setBackgroundColor(getResources().getColor(R.color.gray));

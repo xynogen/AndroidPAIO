@@ -1,7 +1,5 @@
 package com.polsri.paio.menu;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
@@ -11,14 +9,34 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.polsri.paio.R;
+import com.polsri.paio.dataClass.BeriMakan;
+import com.polsri.paio.dataClass.SettingPendapatan;
+import com.polsri.paio.dataClass.SettingsBiaya;
+import com.polsri.paio.dataClass.SettingsDate;
+
+import org.w3c.dom.Text;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
 
 public class prediction extends AppCompatActivity {
     Dialog datePickerDialog;
-    Date datePembudidayaan, dateTerjual;
+    SettingsDate settingsDate;
+    SettingsBiaya settingsBiaya;
+    SettingPendapatan settingPendapatan;
+    String url = "https://autofish-d31e9-default-rtdb.asia-southeast1.firebasedatabase.app/";
+    DatabaseReference database = FirebaseDatabase.getInstance(url).getReference("/");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,12 +44,14 @@ public class prediction extends AppCompatActivity {
 
         datePickerDialog = new Dialog(this);
 
-        EditText tanggalPembudidayaan = (EditText) findViewById(R.id.etTanggalPembudidayaan);
-        tanggalPembudidayaan.setOnClickListener(new View.OnClickListener() {
+        Button btnTanggalPembudidayaan = (Button) findViewById(R.id.btnTanggalPembudidayaan);
+        TextView tvTanggalPembudidayaan = (TextView) findViewById(R.id.tvTanggalPembudidayaan);
+        btnTanggalPembudidayaan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 datePickerDialog.setContentView(R.layout.date_picker_pop);
                 DatePicker Select = (DatePicker) datePickerDialog.findViewById(R.id.npSelect);
+                Select.setMaxDate(Calendar.getInstance().getTimeInMillis());
                 Button btnAtur = (Button) datePickerDialog.findViewById(R.id.btnAtur);
                 datePickerDialog.show();
 
@@ -39,21 +59,34 @@ public class prediction extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String tanggal = String.valueOf(Select.getDayOfMonth()) + "/" +
-                                String.valueOf(Select.getMonth()) + "/" +
+                                String.valueOf(Select.getMonth()+1) + "/" +
                                 String.valueOf(Select.getYear());
-                        tanggalPembudidayaan.setText(tanggal);
+                        tvTanggalPembudidayaan.setText(tanggal);
                         datePickerDialog.dismiss();
                     }
                 });
             }
         });
 
-        EditText tanggaTerjual = (EditText) findViewById(R.id.etTanggalTerjual);
-        tanggaTerjual.setOnClickListener(new View.OnClickListener() {
+        Button btntTanggalTerjual = (Button) findViewById(R.id.btnTanggalTerjual);
+        TextView tvTanggalTerjual = (TextView) findViewById(R.id.tvTanggalTerjual);
+        TextView SelisihHari = (TextView) findViewById(R.id.tvSelisihHari);
+        btntTanggalTerjual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 datePickerDialog.setContentView(R.layout.date_picker_pop);
                 DatePicker Select = (DatePicker) datePickerDialog.findViewById(R.id.npSelect);
+                String tanggalPembudidayaanStr = tvTanggalPembudidayaan.getText().toString();
+                Date minDate = null;
+                try
+                {
+                    minDate = new SimpleDateFormat("d/M/yyyy").parse(tanggalPembudidayaanStr);
+                }
+                catch (Exception e) {
+                    minDate = Calendar.getInstance().getTime();
+
+                }
+                Select.setMinDate(minDate.getTime());
                 Button btnAtur = (Button) datePickerDialog.findViewById(R.id.btnAtur);
                 datePickerDialog.show();
 
@@ -61,9 +94,17 @@ public class prediction extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         String tanggal = String.valueOf(Select.getDayOfMonth()) + "/" +
-                                String.valueOf(Select.getMonth()) + "/" +
+                                String.valueOf(Select.getMonth()+1) + "/" +
                                 String.valueOf(Select.getYear());
-                        tanggaTerjual.setText(tanggal);
+                        tvTanggalTerjual.setText(tanggal);
+
+                        String tanggalPembudidayaanStr = tvTanggalPembudidayaan.getText().toString();
+                        String tanggalTerjualStr = tvTanggalTerjual.getText().toString();
+
+                        SettingsDate settingsTanggal = new SettingsDate(tanggalPembudidayaanStr, tanggalTerjualStr);
+
+
+                        SelisihHari.setText(String.valueOf(settingsTanggal.getDayDifference()).concat(" Hari"));
                         datePickerDialog.dismiss();
                     }
                 });
@@ -71,93 +112,104 @@ public class prediction extends AppCompatActivity {
         });
 
         EditText biayaPakan = (EditText) findViewById(R.id.etBiayaPakan);
-        biayaPakan.setOnClickListener(new clickHandler());
-
         EditText biayaTenagaKerja = (EditText) findViewById(R.id.etBiayaTenagaKerja);
-        biayaTenagaKerja.setOnClickListener(new clickHandler());
-
         EditText biayaPembibitan = (EditText) findViewById(R.id.etBiayaPembibitan);
-        biayaPembibitan.setOnClickListener(new clickHandler());
-
         EditText biayaPerawatan = (EditText) findViewById(R.id.etBiayaPerawatan);
-        biayaPerawatan.setOnClickListener(new clickHandler());
-
         EditText biayaOverhead = (EditText) findViewById(R.id.etBiayaOverhead);
-        biayaOverhead.setOnClickListener(new clickHandler());
-
         EditText biayaUtilitas = (EditText) findViewById(R.id.etBiayaUtilitas);
-        biayaUtilitas.setOnClickListener(new clickHandler());
-
         EditText biayaDistribusiPemasaran = (EditText) findViewById(R.id.etBiayaDistribusiPerawatan);
-        biayaDistribusiPemasaran.setOnClickListener(new clickHandler());
-
         EditText jumlahPanen = (EditText) findViewById(R.id.etJumlahPanen);
-        jumlahPanen.setOnClickListener(new clickHandler());
-
         EditText hargaJualProduk = (EditText) findViewById(R.id.etHargaJualProduk);
-        hargaJualProduk.setOnClickListener(new clickHandler());
-
         Button hitung = (Button) findViewById(R.id.hitung);
-
         TextView hasil = (TextView) findViewById(R.id.hasil);
+
+        database.child("prediction").child("date").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Toast.makeText(getBaseContext(), task.getException().toString(), Toast.LENGTH_SHORT ).show();
+                }
+                else {
+                    settingsDate = task.getResult().getValue(SettingsDate.class);
+                    tvTanggalPembudidayaan.setText(settingsDate.getTanggalPembudidayaan());
+                    tvTanggalTerjual.setText(settingsDate.getTanggaTerjual());
+                    SelisihHari.setText(String.valueOf(settingsDate.getDayDifference()).concat(" Hari"));
+                }
+            }
+        });
+
+        database.child("prediction").child("biaya").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Toast.makeText(getBaseContext(), task.getException().toString(), Toast.LENGTH_SHORT ).show();
+                }
+                else {
+                    settingsBiaya = task.getResult().getValue(SettingsBiaya.class);
+                    biayaPakan.setText(settingsBiaya.getBiayaPakan());
+                    biayaTenagaKerja.setText(settingsBiaya.getBiayaTenagaKerja());
+                    biayaPembibitan.setText(settingsBiaya.getBiayaPembibitan());
+                    biayaPerawatan.setText(settingsBiaya.getBiayaPerawatan());
+                    biayaOverhead.setText(settingsBiaya.getBiayaOverhead());
+                    biayaUtilitas.setText(settingsBiaya.getBiayaUtilitas());
+                    biayaDistribusiPemasaran.setText(settingsBiaya.getBiayaDistribusiPemasaran());
+                }
+            }
+        });
+
+        database.child("prediction").child("pendapatan").get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Toast.makeText(getBaseContext(), task.getException().toString(), Toast.LENGTH_SHORT ).show();
+                }
+                else {
+                    settingPendapatan = task.getResult().getValue(SettingPendapatan.class);
+                    jumlahPanen.setText(settingPendapatan.getJumlahPanen());
+                    hargaJualProduk.setText(settingPendapatan.getHargaJualProduk());
+                }
+            }
+        });
+
 
         hitung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String tanggalPembudidayaanStr = tanggalPembudidayaan.getText().toString();
-                String tanggalTerjualStr = tanggaTerjual.getText().toString();
+                String tanggalPembudidayaanStr = tvTanggalPembudidayaan.getText().toString();
+                String tanggalTerjualStr = tvTanggalTerjual.getText().toString();
+                settingsDate = new SettingsDate(tanggalPembudidayaanStr, tanggalTerjualStr);
+                int dayDifference = settingsDate.getDayDifference();
 
-                Date datePembudidayaan = null;
-                Date dateProduk = null;
+                String biayaPakanInt = biayaPakan.getText().toString();
+                String biayaTenagaKerjaInt = biayaTenagaKerja.getText().toString();
+                String biayaPembibitanInt = biayaPembibitan.getText().toString();
+                String biayaPerawatanInt = biayaPerawatan.getText().toString();
+                String biayaOverheadInt = biayaOverhead.getText().toString();
+                String biayaUtilitasInt = biayaUtilitas.getText().toString();
+                String biayaDistribusiPemasaranInt = biayaDistribusiPemasaran.getText().toString();
 
-                try
-                {
-                    datePembudidayaan = new SimpleDateFormat("d/M/yyyy").parse(tanggalPembudidayaanStr);
-                    dateProduk = new SimpleDateFormat("d/M/yyyy").parse(tanggalTerjualStr);
-                }
-                catch (Exception e) {
-                    Toast.makeText(getBaseContext(), "Format Tanggal Salah" , Toast.LENGTH_SHORT ).show();
-                }
+                settingsBiaya = new SettingsBiaya(biayaPakanInt, biayaTenagaKerjaInt, biayaPembibitanInt,
+                        biayaPerawatanInt, biayaOverheadInt, biayaUtilitasInt, biayaDistribusiPemasaranInt);
 
-                long timeDiff = dateProduk.getTime() - datePembudidayaan.getTime();
-                int dayDifference = (int) ((timeDiff / (1000*60*60*24)) % 365);
+                String jumlahPanenStr = jumlahPanen.getText().toString();
+                String hargaJualProdukStr = hargaJualProduk.getText().toString();
+                settingPendapatan = new SettingPendapatan(jumlahPanenStr, hargaJualProdukStr);
 
-
-
-                int biayaPakanInt = Integer.parseInt(biayaPakan.getText().toString());
-                int biayaTenagaKerjaInt = Integer.parseInt(biayaTenagaKerja.getText().toString());
-                int biayaPembibitanInt = Integer.parseInt(biayaPembibitan.getText().toString());
-                int biayaPerawatanInt = Integer.parseInt(biayaPerawatan.getText().toString());
-                int biayaOverheadInt = Integer.parseInt(biayaOverhead.getText().toString());
-                int biayaUtilitasInt = Integer.parseInt(biayaUtilitas.getText().toString());
-                int biayaDistribusiPemasaranInt = Integer.parseInt(biayaDistribusiPemasaran.getText().toString());
-                int totalBiaya = biayaPakanInt + biayaTenagaKerjaInt + biayaPembibitanInt + biayaPerawatanInt + biayaOverheadInt
-                        + biayaUtilitasInt + biayaDistribusiPemasaranInt;
-
-                if (totalBiaya <= 0) {
-                    Toast.makeText(getBaseContext(), "Total Biaya Kosong" , Toast.LENGTH_SHORT ).show();
+                try {
+                    database.child("prediction").child("date").setValue(settingsDate);
+                    database.child("prediction").child("biaya").setValue(settingsBiaya);
+                    database.child("prediction").child("pendapatan").setValue(settingPendapatan);
+                } catch (Exception e) {
+                    Toast.makeText(getBaseContext(), "Data Gagal Dikirim" , Toast.LENGTH_SHORT ).show();
                 }
 
-                int jumlahPanenInt = Integer.parseInt(jumlahPanen.getText().toString());
-                int hargaJualProdukInt = Integer.parseInt(hargaJualProduk.getText().toString());
-                int totalKeuntungan = jumlahPanenInt * hargaJualProdukInt;
 
-                double hariBEP = (totalBiaya * 1.0 / totalKeuntungan * 1.0 ) * (dayDifference * 1.0);
-
-
+                double hariBEP = (settingsBiaya.getTotalBiaya() * 1.0 / settingPendapatan.getTotalKeuntungan() * 1.0 ) * (dayDifference * 1.0);
                 hasil.setText(String.format("%.1f%n Hari", hariBEP));
 
-             }
+            }
         });
 
     };
-    public class clickHandler implements View.OnClickListener {
-        EditText view;
 
-        @Override
-        public void onClick(View v) {
-            view = (EditText) findViewById(v.getId());
-            view.setText("");
-        }
-    }
 }

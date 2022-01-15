@@ -73,22 +73,15 @@
                 android:layout_margin="8dp"
                 android:clickable="true"
                 android:elevation="8dp"
-                app:cardCornerRadius="8dp"/>
+                app:cardCornerRadius="8dp">
 
-            <TextView
+            <Button
+                android:id="@+id/btnCamera"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="0"
-                android:layout_rowWeight="0"
-                android:layout_column="0"
-                android:layout_columnSpan="2"
-                android:layout_gravity="fill"
-                android:layout_margin="25dp"
-                android:gravity="center"
-                android:text="@string/waterDesc"
-                android:textColor="@color/blue"
-                android:translationZ="10dp" />
-
+                android:text="Camera View"
+                android:layout_gravity="center"/>
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="wrap_content"
@@ -240,13 +233,14 @@
                        android:text="Volume Kolam"
                        android:textColor="@color/blue"
                        android:textSize="15sp"/>
+
                     <TextView
                         android:id="@+id/volume"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/blue"
                         android:textSize="35sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/blue"/>
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
@@ -254,7 +248,7 @@
 
             <Button
                 android:id="@+id/siramTanaman"
-                android:layout_columnSpan="2"
+                android:layout_columnSpan="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -265,6 +259,21 @@
                 android:drawableTop="@drawable/ic_watering"
                 android:paddingTop="20dp"
                 android:paddingBottom="20dp"/>
+
+            <Button
+                android:id="@+id/aliriTanaman"
+                android:layout_columnSpan="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Aliri Tanaman"
+                android:textColor="@color/white"
+                android:drawableTint="@color/white"
+                android:drawableTop="@drawable/ic_flow"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"/>
+
 
 
         </GridLayout>

@@ -14,8 +14,11 @@
         <activity android:name=".menu.kondisiAir"></activity>
         <activity android:name=".menu.settings" />
         <activity android:name=".menu.prediction" />
-        <activity android:name=".MainActivity" />
+        <activity android:name=".menu.CameraView" />
         <activity android:name=".menu.beriMakan" />
+        <activity android:name=".MainActivity" />
+
+
         <activity android:name=".splash.splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,18 +2,240 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
     tools:context=".menu.settings">
 
-    <Button
-        android:id="@+id/restart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/white"
-        android:text="restart"
-        android:layout_gravity="center_horizontal"
-        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:rowCount="2"
+            android:columnCount="1">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal"
+                android:layout_margin="8dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@color/gray"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Settings"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Panjang (m)"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/blue"/>
+                        <EditText
+                            android:id="@+id/etPanjang"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="match_parent"
+                            android:paddingRight="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:backgroundTint="@color/blue"
+                            android:inputType="numberDecimal"
+                            android:text="0"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Lebar (m)"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/blue"/>
+                        <EditText
+                            android:id="@+id/etLebar"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="match_parent"
+                            android:paddingRight="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:backgroundTint="@color/blue"
+                            android:inputType="numberDecimal"
+                            android:text="0"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="4dp"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginBottom="4dp"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:text="Jarak Ke Dasar (cm)"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/blue"/>
+                        <EditText
+                            android:id="@+id/etjarakKeDasar"
+                            android:layout_marginLeft="40dp"
+                            android:layout_width="match_parent"
+                            android:paddingRight="4dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textColor="@color/blue"
+                            android:backgroundTint="@color/blue"
+                            android:inputType="numberDecimal"
+                            android:text="0"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnRestart"
+                    android:layout_width="130sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="restart"
+                    android:textColor="@color/white"/>
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="130sp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="Save"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+        </GridLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@color/gray"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pendapatan"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Jumlah Panen (Kg)"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/blue"/>
+                <EditText
+                    android:id="@+id/etJumlahPanen"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:paddingRight="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/blue"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="6dp"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:text="Harga Jual Produk (Rp)"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/blue"/>
+                <EditText
+                    android:id="@+id/etHargaJualProduk"
+                    android:layout_marginLeft="40dp"
+                    android:layout_width="match_parent"
+                    android:paddingRight="4dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/blue"
+                    android:backgroundTint="@color/blue"
+                    android:inputType="numberDecimal"
+                    android:text="0"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>

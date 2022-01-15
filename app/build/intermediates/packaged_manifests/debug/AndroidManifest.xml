@@ -24,13 +24,13 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_polsri_round"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.Paio" >
         <activity android:name="com.polsri.paio.menu.kondisiAir" />
         <activity android:name="com.polsri.paio.menu.settings" />
         <activity android:name="com.polsri.paio.menu.prediction" />
-        <activity android:name="com.polsri.paio.MainActivity" />
+        <activity android:name="com.polsri.paio.menu.CameraView" />
         <activity android:name="com.polsri.paio.menu.beriMakan" />
+        <activity android:name="com.polsri.paio.MainActivity" />
         <activity android:name="com.polsri.paio.splash.splash" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

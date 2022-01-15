@@ -26,4 +26,13 @@ public class SettingPendapatan {
     public void setHargaJualProduk(String hargaJualProduk) {
         this.hargaJualProduk = hargaJualProduk;
     }
+
+    public int getTotalKeuntungan() {
+        if (this.jumlahPanen.isEmpty() || hargaJualProduk.isEmpty()) {
+            return 1;
+        }
+        else {
+            return Integer.parseInt(this.jumlahPanen) * Integer.parseInt(this.hargaJualProduk);
+        }
+    }
 }

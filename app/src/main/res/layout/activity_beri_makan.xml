@@ -116,9 +116,10 @@
                     android:orientation="vertical">
 
                     <TextView
+                        android:id="@+id/tvBeratSekarang"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20 Kg"
+                        android:text=""
                         android:textSize="25sp"
                         android:textStyle="bold"
                         android:textColor="@color/blue"/>

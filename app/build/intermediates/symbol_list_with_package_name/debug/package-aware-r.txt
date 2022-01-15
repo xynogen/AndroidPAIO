@@ -1721,6 +1721,7 @@ drawable design_snackbar_background
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_clock_black_24dp
+drawable ic_flow
 drawable ic_food
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1775,6 +1776,7 @@ id App
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id CameraIV
 id FUNCTION
 id META
 id NO_DEBUG
@@ -1844,6 +1846,7 @@ id adjust_height
 id adjust_width
 id alertTitle
 id aligned
+id aliriTanaman
 id all
 id always
 id animateToEnd
@@ -1865,6 +1868,11 @@ id bottom
 id bounce
 id btnAtur
 id btnBeratPakan
+id btnCamera
+id btnRestart
+id btnSave
+id btnTanggalPembudidayaan
+id btnTanggalTerjual
 id btnTimerPakan
 id buttonPanel
 id cache_measures
@@ -1946,8 +1954,9 @@ id etBiayaTenagaKerja
 id etBiayaUtilitas
 id etHargaJualProduk
 id etJumlahPanen
-id etTanggalPembudidayaan
-id etTanggalTerjual
+id etLebar
+id etPanjang
+id etjarakKeDasar
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -2100,7 +2109,6 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id restart
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2166,6 +2174,7 @@ id stop
 id stretch
 id submenuarrow
 id submit_area
+id swiperefreshlayoutNode1
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -2219,6 +2228,10 @@ id transition_transform
 id triangle
 id turbidity
 id tvBeratPakan
+id tvBeratSekarang
+id tvSelisihHari
+id tvTanggalPembudidayaan
+id tvTanggalTerjual
 id tvTimerPakan
 id unchecked
 id uniform
@@ -2302,6 +2315,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_beri_makan
+layout activity_camera_view
 layout activity_kondisi_air
 layout activity_main
 layout activity_prediction
